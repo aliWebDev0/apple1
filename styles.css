@@ -1,0 +1,257 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.hamburgur {
+  color: white;
+}
+
+#dropdown {
+  display: none;
+}
+
+#hidden-small-nav {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 96vw;
+  padding: 10px 0px 10px 10px;
+  height: 100vh;
+}
+
+#dropdown:target {
+  top: 58px;
+  position: absolute;
+  z-index: 111;
+  display: block;
+  background-color: #333;
+}
+
+#drop a {
+  color: white;
+}
+
+.row {
+  text-align: center;
+  height: 100vh;
+}
+
+.row a {
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template: auto / 100%;
+  gap: 5px;
+  /* border: 3px solid gray; */
+}
+
+.box {
+  width: auto;
+  height: auto;
+  background-color: white;
+  margin: 10px;
+}
+
+.box img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.description {
+  position: absolute;
+  left: 7rem;
+}
+
+.description-right {
+  position: absolute;
+  right: 5rem;
+}
+.shoping-intro {
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#visible-nav {
+  z-index: 113;
+  position: fixed;
+  padding: 10px;
+  width: auto;
+  left: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(54, 44, 44);
+  opacity: 90%;
+  margin-bottom: 1000px;
+}
+
+#visible-nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.menu {
+  display: none;
+}
+
+.blue-header {
+  position: relative;
+  color: white;
+  padding: 2px 40px 2px 40px;
+  top: 51px;
+  background-color: dodgerblue;
+}
+
+.wheat-header {
+  margin-top: 40px;
+  padding: 2px 40px 2px 40px;
+  top: 50px;
+  background-color: rgb(243, 225, 225);
+}
+
+.three,
+.five,
+.eight {
+  color: wheat;
+}
+
+.seven,
+.nine,
+.two,
+.six {
+  color: white;
+}
+
+.three a {
+  color: dodgerblue;
+}
+
+footer {
+  color: rgb(87, 79, 79);
+  text-align: left;
+}
+
+.footer-description {
+  padding: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .box .one {
+    background: url(images/watch.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    height: 640vh;
+    grid-template: auto / 50fr 50fr;
+    grid-template-areas:
+      "main-one main-one"
+      "main-two main-two"
+      "main-three main-three"
+      "article-one article-two"
+      "article-three article-four"
+      "article-five article-six";
+  }
+
+  .container .one {
+    grid-column: main-one;
+  }
+
+  .container .two {
+    grid-column: main-two;
+  }
+
+  .container .three {
+    grid-column: main-three;
+  }
+
+  .footer-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
+  }
+
+  #hidden-small-nav {
+    display: none;
+  }
+
+  #hr-line {
+    width: 90%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav {
+    justify-content: space-evenly;
+  }
+
+  nav span:first-child {
+    display: none;
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+  transition: border-color 0.15s, box-shadow 0.15;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #7db0fb;
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(24, 177, 255, 02);
+}
+
+form {
+  position: absolute;
+  z-index: 111;
+  top: 10rem;
+  right: 2rem;
+  padding: 1rem;
+}
+
+/* label {
+  display: block;
+} */
+
+button {
+  background-color: #0d6efd;
+  color: #fff;
+  border: 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  outline: 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+
